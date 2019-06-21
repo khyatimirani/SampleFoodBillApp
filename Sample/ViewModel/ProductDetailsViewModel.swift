@@ -23,5 +23,9 @@ class ProductDetailsViewModel {
         productList = [product1, product2, product3, product4]
     }
     
+    func updateProductCount(withIndex:Int,count:Int)
+    {
+        productList[withIndex].productCount = count
+    }
     
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductListTabelViewController: BaseVC {
+class ProductListTableViewController: BaseVC {
     
     
     @IBOutlet weak var productTableView: UITableView!
@@ -43,16 +43,20 @@ class ProductListTabelViewController: BaseVC {
 
 }
 
-extension ProductListTabelViewController: UITableViewDelegate, UITableViewDataSource {
+extension ProductListTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return productDetailsVM.productList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  self.productTableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell")
+        let cell =  self.productTableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell") as? ProductTableViewCell
+        cell?.configure(withProductDetails: productDetailsVM.productList[indexPath.row])
         return cell ?? UITableViewCell()
         
     }
     
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryListViewController: BaseVC {
+class CategoryListViewController: UIViewController {
 
     
     @IBOutlet weak var totalBudget: UILabel!
@@ -16,22 +16,15 @@ class CategoryListViewController: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func initialize() {
-        super.initialize()
         totalBudget.text = "0 / " + GlobalConstants.shared.finalBudget.description
         print("In CategoryListViewController")
     }
     
-    override func hasBackButton() -> Bool {
-        return true
-    }
     
-    override func back(_ sender: Any?) {
+    @IBAction func backAction(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     
     
    
