@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductTableViewCell" rowHeight="119" id="KGk-i7-Jjw" customClass="ProductTableViewCell" customModule="Sample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="118.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="TjF-1l-CnV">
+                        <rect key="frame" x="289" y="45" width="94" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="94" id="2zC-GR-XAl"/>
+                        </constraints>
+                        <connections>
+                            <action selector="procutAddStepper:" destination="KGk-i7-Jjw" eventType="valueChanged" id="jcl-jj-z7y"/>
+                        </connections>
+                    </stepper>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xr-gN-WbY" userLabel="ProductName">
+                        <rect key="frame" x="10" y="10" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity: 500 gm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vim-QY-etZ">
+                        <rect key="frame" x="10" y="34" width="118" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxT-bD-Rpw">
+                        <rect key="frame" x="10" y="55" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhn-xR-0Xz">
+                        <rect key="frame" x="286" y="59.5" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TjF-1l-CnV" firstAttribute="leading" secondItem="Bhn-xR-0Xz" secondAttribute="trailing" constant="3" id="1c3-6u-Hvy"/>
+                    <constraint firstItem="WxT-bD-Rpw" firstAttribute="top" secondItem="vim-QY-etZ" secondAttribute="bottom" constant="3" id="9tr-3B-1Ay"/>
+                    <constraint firstItem="vim-QY-etZ" firstAttribute="top" secondItem="3xr-gN-WbY" secondAttribute="bottom" constant="3" id="GIL-hG-Z9F"/>
+                    <constraint firstItem="WxT-bD-Rpw" firstAttribute="leading" secondItem="vim-QY-etZ" secondAttribute="leading" id="NYv-3j-byt"/>
+                    <constraint firstItem="TjF-1l-CnV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Vzl-ab-DRV"/>
+                    <constraint firstItem="Bhn-xR-0Xz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="WoS-dL-iFS"/>
+                    <constraint firstItem="vim-QY-etZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ata-LA-hit"/>
+                    <constraint firstItem="3xr-gN-WbY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="cxm-P2-KDm"/>
+                    <constraint firstItem="3xr-gN-WbY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qIU-sy-23v"/>
+                    <constraint firstAttribute="trailing" secondItem="TjF-1l-CnV" secondAttribute="trailing" constant="10" id="rbD-wJ-2L4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="productCountLabel" destination="Bhn-xR-0Xz" id="XkT-h5-ajQ"/>
+                <outlet property="productNameLabel" destination="3xr-gN-WbY" id="z94-eq-y9Y"/>
+                <outlet property="productPriceLabel" destination="WxT-bD-Rpw" id="bbZ-PF-a5Z"/>
+            </connections>
+            <point key="canvasLocation" x="116" y="26.53673163418291"/>
+        </tableViewCell>
+    </objects>
+</document>
